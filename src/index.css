@@ -1,13 +1,31 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .slider-thumb {
+    @apply appearance-none w-3 h-6 bg-black border-2 border-gray-300 rounded-full cursor-pointer shadow;
+  }
+  
+  input[type="range"]::-webkit-slider-thumb {
+    @apply slider-thumb;
+  }
+  
+  input[type="range"]::-moz-range-thumb {
+    @apply slider-thumb;
+  }
+  
+  input[type="range"]::-ms-thumb {
+    @apply slider-thumb;
+  }
+  /* Hide the number input arrows */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input[type='number'] {
+  -moz-appearance: textfield; /* Firefox */
+}
 }
