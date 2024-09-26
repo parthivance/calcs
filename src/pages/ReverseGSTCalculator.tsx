@@ -30,7 +30,7 @@ const ReverseGSTCalculator: React.FC = () => {
       <div className={`flex items-center justify-center min-h-screen bg-gray-100 ${isMobile ? 'p-4' : ''}`}>
         <div className={`${isMobile ? 'w-full' : 'w-[1119px]'} bg-white p-6 py-10 flex flex-col gap-6 justify-center min-h-[407px] rounded-3xl`}>
           <div className="flex justify-between items-center">
-            <h1 className={`${isMobile ? 'text-2xl' : 'text-4xl'} font-bold`}>GST Calculator</h1>
+            <h1 className={`${isMobile ? 'text-2xl' : 'text-4xl'} font-bold`}>Reverse GST Calculator</h1>
           </div>
   
           <div className={`${isMobile ? 'flex flex-col' : 'grid grid-cols-2'} gap-6`}>
