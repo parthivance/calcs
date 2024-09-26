@@ -13,7 +13,7 @@ import ReverseGSTCalculator from "./pages/ReverseGSTCalculator"
 function App() {
   return (
     <div className="bg-gray-100 min-h-screen py-3">
-      <ReverseGSTCalculator />
+      <GSTCalculator />
     </div>
   );
 }

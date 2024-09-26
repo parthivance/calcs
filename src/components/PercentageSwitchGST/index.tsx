@@ -3,13 +3,14 @@ import React from 'react';
 interface PercentageSwitchProps {
   selected: number;
   onSelect: (value: number) => void;
+  className?: string; // Optional className prop for styling flexibility
 }
 
-const PercentageSwitch: React.FC<PercentageSwitchProps> = ({ selected, onSelect }) => {
+const PercentageSwitch: React.FC<PercentageSwitchProps> = ({ selected, onSelect, className }) => {
   const options = [5, 3, 12, 18, 28];
 
   return (
-    <div className="flex w-full md:w-[378px] h-[34px] rounded-full bg-gray-100 overflow-hidden">
+    <div className={`${className} flex h-[34px] rounded-full bg-gray-100 overflow-hidden`}>
       {options.map((option, index) => (
         <button
           key={option}
