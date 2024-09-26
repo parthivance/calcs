@@ -9,11 +9,12 @@ import MonthlySavingsCalculator from "./pages/MonthlySavingsCalculator";
 import RemitanceCalculator from "./pages/RemitanceCalculator";
 import GSTCalculator from "./pages/GSTCalculator";
 import ReverseGSTCalculator from "./pages/ReverseGSTCalculator"
+import SICalculator from "./pages/SICalculator"
 
 function App() {
   return (
     <div className="bg-gray-100 min-h-screen py-3">
-      <GSTCalculator />
+      <SICalculator />
     </div>
   );
 }
