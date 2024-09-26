@@ -92,10 +92,9 @@ const NSCCalculator = () => {
           <h1 className="text-3xl font-bold">NSC Calculator</h1>
           <div className="flex items-center gap-2">
             <ToggleSwitch
-              label="Senior Citizen"
               checked={isSeniorCitizen}
               onChange={() => setIsSeniorCitizen(prev => !prev)}
-            />
+            > Senior Citizen</ToggleSwitch>
           </div>
         </div>
 

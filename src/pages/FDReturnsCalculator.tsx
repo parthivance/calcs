@@ -80,14 +80,13 @@ const FDReturnsCalculator: React.FC = () => {
   return (
     <div className={`flex items-center justify-center min-h-screen bg-gray-100 ${isMobile ? 'p-4' : ''}`}>
       <div className={`${isMobile ? 'w-full' : 'w-[1680px]'} bg-white p-6 py-10 flex flex-col gap-6 justify-center min-h-[780px]`}>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mb-8">
           <h1 className={`${isMobile ? 'text-2xl' : 'text-4xl'} font-bold`}>FD returns Calculator</h1>
           <div className="flex items-center gap-2">
-            <ToggleSwitch 
-              label="Senior Citizen"
+          <ToggleSwitch
               checked={isSeniorCitizen}
               onChange={() => setIsSeniorCitizen(prev => !prev)}
-            />
+            > Senior Citizen</ToggleSwitch>
           </div>
         </div>
 
@@ -130,10 +129,10 @@ const FDReturnsCalculator: React.FC = () => {
 
           <div className={`${isMobile ? 'w-full' : 'w-1/3'} flex flex-col gap-6`} ref={resultsRef}>
             <ToggleSwitch 
-              label="Post tax"
               checked={isPostTax}
               onChange={() => setIsPostTax(prev => !prev)}
-            />
+            >Post tax
+            </ToggleSwitch>
             <div>
               <span className="font-semibold">Select tax slab</span>
               <div className="flex gap-2 mt-2">

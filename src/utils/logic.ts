@@ -144,3 +144,53 @@ export const getChartOptions = (maxValue: number): ChartConfiguration<'line'>['o
     },
   };
 };
+
+// utils/logic.ts
+
+interface GSTParams {
+  amount: number;
+  profitRatio: number;
+  taxRate: number;
+  isSameState: boolean;
+}
+
+interface GSTResult {
+  amountBeforeGST: number;
+  gstAmount: number;
+  totalAmount: number;
+  cgst: number;
+  sgst: number;
+  igst: number;
+}
+
+export function calculateGST({ amount, profitRatio, taxRate, isSameState }: GSTParams): GSTResult {
+  // Calculate the amount including profit
+  const amountWithProfit = amount * (1 + profitRatio / 100);
+
+  // Calculate GST amount
+  const gstAmount = (amountWithProfit * taxRate) / 100;
+
+  // Calculate total amount including GST
+  const totalAmount = amountWithProfit + gstAmount;
+
+  // Calculate CGST, SGST, and IGST
+  let cgst = 0;
+  let sgst = 0;
+  let igst = 0;
+
+  if (isSameState) {
+    cgst = gstAmount / 2;
+    sgst = gstAmount / 2;
+  } else {
+    igst = gstAmount;
+  }
+
+  return {
+    amountBeforeGST: amountWithProfit,
+    gstAmount,
+    totalAmount,
+    cgst,
+    sgst,
+    igst
+  };
+}

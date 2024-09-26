@@ -63,4 +63,28 @@ interface CalculateRDParams {
       };
     });
   };
-  
+  // src/utils/gstCalculator.ts
+
+export interface GSTCalculationResult {
+  totalAmount: number;
+  totalProfit: number;
+  cgst: number;
+  sgst: number;
+  igst: number;
+}
+
+export const calculateGST = (
+  amount: number,
+  taxRate: number
+): GSTCalculationResult => {
+  const baseAmount = amount / (1 + taxRate / 100);
+  const totalGST = amount - baseAmount;
+
+  return {
+    totalAmount: amount,
+    totalProfit: totalGST,
+    cgst: totalGST / 2,
+    sgst: totalGST / 2,
+    igst: totalGST,
+  };
+};

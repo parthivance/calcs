@@ -44,7 +44,7 @@ const PeriodSlider: React.FC<PeriodSliderProps> = ({
 
   return (
     <div className="flex flex-col gap-2 w-full">
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center mb-6">
     <div className="flex items-center gap-2">
       <span className="text-sm md:text-base font-bold text-gray-700">{field}</span>
       <div className="flex bg-gray-200 rounded-full">
