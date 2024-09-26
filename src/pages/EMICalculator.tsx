@@ -124,7 +124,7 @@ const EMICalculator = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-6">
-          <div className="w-full md:w-2/3 h-full flex justify-center mt-14">
+          <div className="w-full md:w-1/2 h-full flex justify-center mt-14">
             <Doughnut
               data={chartData}
               options={chartOptions}
@@ -133,7 +133,7 @@ const EMICalculator = () => {
             />
           </div>
 
-          <div className="w-full md:w-1/3 flex flex-col gap-6" ref={resultsRef}>
+          <div className="w-full md:w-1/2 flex flex-col gap-6" ref={resultsRef}>
             <div className="flex flex-col gap-4 mt-5">
               <ResultsDisplay
                 items={[

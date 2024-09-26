@@ -132,7 +132,7 @@ const NSCCalculator = () => {
         </div>
 
         <div className="flex flex-col md:flex-row gap-6">
-          <div className="w-full md:w-2/3 h-full flex justify-center mt-7">
+          <div className="w-full md:w-1/2 h-full flex justify-center mt-7">
             <Doughnut
               data={chartData}
               options={chartOptions}
@@ -141,7 +141,7 @@ const NSCCalculator = () => {
             />
           </div>
 
-          <div className="w-full md:w-1/3 flex flex-col gap-6" ref={resultsRef}>
+          <div className="w-full md:w-1/2 flex flex-col gap-6" ref={resultsRef}>
             <div className="flex flex-col gap-4 mt-7">
               <ResultsDisplay
                 items={[
