@@ -20,7 +20,7 @@ interface EMIResults {
   totalAmount: number;
 }
 
-const HomeLoanCalculator = () => {
+const EMICalculator = () => {
   const [loanAmount, setLoanAmount] = useState(500000);
   const [interestRate, setInterestRate] = useState(8.5);
   const [loanTerm, setLoanTerm] = useState(20);
@@ -89,7 +89,7 @@ const HomeLoanCalculator = () => {
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white p-6 py-10 flex flex-col gap-6 justify-center w-full max-w-[1200px]">
-        <h1 className="text-3xl font-bold">Home Loan Calculator</h1>
+        <h1 className="text-3xl font-bold">EMI Calculator</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <InvestmentSlider
@@ -151,4 +151,4 @@ const HomeLoanCalculator = () => {
   );
 };
 
-export default HomeLoanCalculator;
+export default EMICalculator;
