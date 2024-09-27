@@ -12,10 +12,11 @@ import ReverseGSTCalculator from "./pages/ReverseGSTCalculator";
 import SICalculator from "./pages/SICalculator";
 import NRIFDCalculator from "./pages/NRIFDCalculator";
 import RetirementCalculator from "./pages/RetirementCalculator";
+import SIPCalculator from "./pages/SIPCalculator"
 function App() {
   return (
     <div className="bg-gray-100 min-h-screen py-3">
-      <RetirementCalculator />
+      <SIPCalculator />
     </div>
   );
 }
