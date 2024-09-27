@@ -92,7 +92,7 @@ const TaxLiabilityCalculator = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-100 p-4">
       <div className="bg-white p-6 py-10 flex flex-col gap-6 justify-center w-full max-w-[1200px]">
         <h1 className="text-3xl font-bold">Tax Liability Calculator</h1>
-        <ToggleButton leftLabel="Old Regime" rightLabel="New Regime" />
+        {/* <ToggleButton leftLabel="Old Regime" rightLabel="New Regime" /> */}
 
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

@@ -10,11 +10,11 @@ import RemitanceCalculator from "./pages/RemitanceCalculator";
 import GSTCalculator from "./pages/GSTCalculator";
 import ReverseGSTCalculator from "./pages/ReverseGSTCalculator"
 import SICalculator from "./pages/SICalculator"
-
+import NRIFDCalculator from "./pages/NRIFDCalculator"
 function App() {
   return (
     <div className="bg-gray-100 min-h-screen py-3">
-      <SICalculator />
+      <NRIFDCalculator />
     </div>
   );
 }
