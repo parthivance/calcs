@@ -15,10 +15,11 @@ import RetirementCalculator from "./pages/RetirementCalculator";
 import SIPCalculator from "./pages/SIPCalculator";
 import DebtSIPCalculator from "./pages/DebtSIPCalculator";
 import CICalculator from "./pages/CICalculator";
+import PPFCalculator from "./pages/PPFCalculator";
 function App() {
   return (
     <div className="bg-gray-100 min-h-screen py-3">
-      <CICalculator />
+      <PPFCalculator />
     </div>
   );
 }

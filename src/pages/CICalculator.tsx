@@ -59,12 +59,18 @@ const CICalculator = () => {
     const [isMobile, setIsMobile] = useState(false);
     const [adjustForInflation, setAdjustForInflation] = useState(false);
     const [inflationRate, setInflationRate] = useState(4);
+    const [interest, setInterest] = useState(0);
+    const [maturityAmount, setMaturityAmount] = useState(0);
 
     useEffect(() => {
         const data = generateChartData(monthlyInvestment, interestRate, timePeriod, compoundFrequency, adjustForInflation, inflationRate);
         setChartData(data);
-        setInvestedAmount(monthlyInvestment * 12 * timePeriod);
-        setEstimatedReturns(data[data.length - 1]['Total Value'] - monthlyInvestment * 12 * timePeriod);
+        const totalInvested = monthlyInvestment * 12 * timePeriod;
+        const totalValue = data[data.length - 1]['Total Value'];
+        setInvestedAmount(totalInvested);
+        setMaturityAmount(totalValue);
+        setInterest(totalValue - totalInvested);
+        setEstimatedReturns(totalValue - totalInvested);
     }, [monthlyInvestment, interestRate, timePeriod, compoundFrequency, adjustForInflation, inflationRate]);
 
     useEffect(() => {
@@ -165,14 +171,18 @@ const CICalculator = () => {
                     onChange={(e) => setTimePeriod(Number(e.target.value))}
                 />
                 <div className="flex justify-between">
-                    <div>
-                        <h3 className="text-xl text-gray-400">Invested amount</h3>
-                        <p className="text-2xl font-bold">{(investedAmount / 100000).toFixed(2)} Lakhs</p>
-                    </div>
-                    <div className="text-right">
-                        <h3 className="text-xl text-gray-400">Estimated returns</h3>
-                        <p className="text-2xl font-bold">{(estimatedReturns / 100000).toFixed(2)} Lakhs</p>
-                    </div>
+                <div>
+                    <h3 className="text-xl text-gray-400">Invested amount</h3>
+                    <p className="text-2xl font-bold">{(investedAmount / 100000).toFixed(2)} Lakhs</p>
+                </div>
+                <div>
+                    <h3 className="text-xl text-gray-400">Interest</h3>
+                    <p className="text-2xl font-bold">{(interest / 100000).toFixed(2)} Lakhs</p>
+                </div>
+                <div>
+                    <h3 className="text-xl text-gray-400">Maturity amount</h3>
+                    <p className="text-2xl font-bold">{(maturityAmount / 100000).toFixed(2)} Lakhs</p>
+                </div>
                 </div>
                 </div>
 
