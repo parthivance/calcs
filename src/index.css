@@ -28,4 +28,9 @@ input[type='number']::-webkit-outer-spin-button {
 input[type='number'] {
   -moz-appearance: textfield; /* Firefox */
 }
+
+input[type='radio']:checked {
+  background-color: green;
+  accent-color: green; /* For modern browsers */
+}
 }
