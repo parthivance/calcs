@@ -143,6 +143,7 @@ const DebtSIPCalculator = () => {
             tip="Investment duration in years"
             value={timePeriod}
             symbol="Y"
+            symbolPosition='right'
             onChange={(e) => setTimePeriod(Number(e.target.value))}
           />
           <InvestmentSlider

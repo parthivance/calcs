@@ -14,10 +14,11 @@ import NRIFDCalculator from "./pages/NRIFDCalculator";
 import RetirementCalculator from "./pages/RetirementCalculator";
 import SIPCalculator from "./pages/SIPCalculator";
 import DebtSIPCalculator from "./pages/DebtSIPCalculator";
+import CICalculator from "./pages/CICalculator";
 function App() {
   return (
     <div className="bg-gray-100 min-h-screen py-3">
-      <DebtSIPCalculator />
+      <CICalculator />
     </div>
   );
 }

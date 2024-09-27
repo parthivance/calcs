@@ -3,7 +3,7 @@ import React from 'react';
 interface ToggleSwitchProps {
   checked: boolean;
   onChange: () => void;
-  children: React.ReactNode; // Now accepts children for flexible content
+  children?: React.ReactNode; // Now accepts children for flexible content
 }
 
 const ToggleSwitch: React.FC<ToggleSwitchProps> = ({ children, checked, onChange }) => {
